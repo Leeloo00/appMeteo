@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='style.css' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6eb2964899.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  </head>
+  <body>
+
+        <!-- Search-bar -->
+        <div class="conainer">
+          <div class="row">
+
+            <div class="col-lg-6 col-sm-12 offset-md-3">
+                
+              <form action="" method="POST">
+                <div class="input-group mb-3">
+                    <input name="cityname" type="text" id="cityname" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-secondary" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="withe" class="bi bi-search" viewBox="0 0 16 16">
+                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                      </button>
+                    </div>
+                </div>
+              </form>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Carte meteo -->
+            <div class="card-meteo">
+
+              <h2 id="name"></h2>
+
+                <img src="img/temp.png" alt="">
+
+              <div id="temps"></div>
+
+              <img  src="icone" alt="">
+
+              <div class="max-min">
+                <p id="min"></p>
+                <p id="max"></p>
+              </div>
+
+              <div id="icon">
+              </div>
+              <div id="weather"></div>  
+
+              <div class="wind-humidity">
+
+                <div class="windhumidity">
+                  <img src="img/wind.png" alt="">
+                  <p id="wind"></p>
+                </div>
+
+
+                <div class="windhumidity">
+                  <img src="img/drop.png" alt="">
+                  <p id="humidity"></p>
+                </div>
+
+
+              </div>
+
+          </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

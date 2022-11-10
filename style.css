@@ -1,0 +1,74 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /* background-color: rgb(2,0,36);
+  background: linear-gradient(90deg, rgb(11, 2, 179) 0%, rgb(59, 59, 209) 35%, rgb(106, 225, 248)100%);; */
+
+background: linear-gradient(to right, rgb(122, 114, 233), rgb(9, 9, 168));
+}
+
+.card-meteo{
+  background-color: rgb(176, 201, 238);
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: rgb(33, 33, 43) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#temps{
+  font-size: 30px;
+}
+
+.max-min{
+  display: flex;
+  justify-content: space-around;
+}
+
+.row{
+  display: flex;
+  flex-direction: column;
+}
+
+.btn:hover{
+  background-color: rgb(190, 190, 194);
+}
+
+.wind-humidity{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.windhumidity{
+  margin-top: 30px;
+}
+
+#weather{
+  margin-top: -20px;
+}
+
+#icon{
+  margin-top: -35px;
+}
+
+
+
+
+@media screen and (max-width: 1040px) {
+  .card-meteo{
+    width:50%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .card-meteo{
+    width:90%;
+  }
+}
+
+
+
+
