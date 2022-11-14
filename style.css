@@ -9,13 +9,20 @@ background: linear-gradient(to right, rgb(122, 114, 233), rgb(9, 9, 168));
 
 #cartMeteo{
   background-color: rgb(176, 201, 238);
-  width: 30%;
+  width: 100%;
   margin: auto;
   text-align: center;
   margin-top: 50px;
   padding: 25px;
   border-radius: 20px;
   box-shadow: rgb(33, 33, 43) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#container{
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
 }
 
 #temps{

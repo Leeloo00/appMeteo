@@ -1,6 +1,8 @@
 const APIKEY = 'a72dac462c18aa2d30ef5807a95ff440';
 const erreur = document.getElementById('erreur');
 const container = document.getElementById('container');
+const img = document.createElement('img');
+const card = document.getElementById('cartMeteo');
 
 
 /*Appel à l'API avec ville en paramère de fonction*/
@@ -12,17 +14,17 @@ let apiCall = function(city){
     fetch(url).then((response) => 
     response.json().then((data) => {
 
-    
+        console.log(data)
 
             document.getElementById('name').innerHTML = data.name;
-            document.getElementById('temps').innerHTML = data.main.temp;
+            document.getElementById('temps').innerHTML = data.main.temp + "°c";
             document.getElementById('weather').innerHTML = data.weather[0].description;
-            document.getElementById('min').innerHTML = "Min : "+ data.main.temp_min ;
-            document.getElementById('max').innerHTML = "Max : "+ data.main.temp_max ;
-            document.getElementById('wind').innerHTML = data.wind.gust + 'km/h';
+            document.getElementById('min').innerHTML = "Min : "+ data.main.temp_min + "°c" ;
+            document.getElementById('max').innerHTML = "Max : "+ data.main.temp_max + "°c";
+            document.getElementById('wind').innerHTML = data.wind.gust*2.1 + 'km/h';
             document.getElementById('humidity').innerHTML = data.main.humidity + '%';
 
-            var img = document.createElement('img');
+            
             img.src= 'http://openweathermap.org/img/wn/'+ data.weather[0].icon +'.png';
             document.getElementById('icon').appendChild(img);
             img.style.width = '100px';
@@ -45,20 +47,18 @@ document.querySelector('form').addEventListener('submit', function(e){
     response.json().then((data)=>{
         console.log(data.name, 'je suis dans la fonction');
         
-
         // Je met une condition si la ville existe tout va bien sinon on supprime la carte et on laisse un message
         if(data.name){
-
-            container.style.display = "block";
+            card.style.display = "block";
             erreur.innerHTML = "";
             apiCall(city);
 
         }else{
-            erreur.innerHTML = 'il n\'y a pas de ville de ce nom';
-            container.style.display = "none";
+            erreur.innerHTML = 'Il n\'y a pas de ville à ce nom';
+            card.style.display = "none";
+            img.remove()
         }
-
-}))
+    }))
 })
 
 // Appel par défaut au chargement de la page
