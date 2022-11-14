@@ -65,15 +65,23 @@ background: linear-gradient(to right, rgb(122, 114, 233), rgb(9, 9, 168));
 
 
 @media screen and (max-width: 1040px) {
-  .card-meteo{
+  #cartMeteo{
     width:50%;
+  }
+
+  #container{
+    width: 100%
   }
 }
 
 @media screen and (max-width: 840px) {
-  .card-meteo{
+  #cartMeteo{
     width:90%;
+  }  
+  #container{
+    width: 100%
   }
+
 }
 
 

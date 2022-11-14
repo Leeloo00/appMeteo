@@ -21,7 +21,7 @@ let apiCall = function(city){
             document.getElementById('weather').innerHTML = data.weather[0].description;
             document.getElementById('min').innerHTML = "Min : "+ data.main.temp_min + "°c" ;
             document.getElementById('max').innerHTML = "Max : "+ data.main.temp_max + "°c";
-            document.getElementById('wind').innerHTML = data.wind.gust*2.1 + 'km/h';
+            document.getElementById('wind').innerHTML = Math.round(data.wind.speed*2.1) + 'km/h';
             document.getElementById('humidity').innerHTML = data.main.humidity + '%';
 
             
