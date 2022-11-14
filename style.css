@@ -7,7 +7,7 @@ body {
 background: linear-gradient(to right, rgb(122, 114, 233), rgb(9, 9, 168));
 }
 
-.card-meteo{
+#cartMeteo{
   background-color: rgb(176, 201, 238);
   width: 30%;
   margin: auto;
